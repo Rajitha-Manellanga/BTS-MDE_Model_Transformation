@@ -1,0 +1,78 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.example.org/bts')]
+
+[template public generateElement(aBus : Bus)]
+[comment @main/]
+[file (aBus.bus_id + '.html' , false, 'UTF-8')]
+
+<html>
+	<head>
+		<title> Bus Transport System [aBus.bus_id/] </title>
+	</head>
+    
+	<body>
+        <h1 style="background-color:DodgerBlue;"> Bus Transport System </h1>
+		<h2>This sections shows list of cities.</h2>
+        <h2>Service is operational for just following cities:</h2>
+		<table>
+              [for (city : City | aBus.city)]
+              <tr>
+                <td>
+                  [city.name/]
+                </td>
+              </tr>
+               [/for]
+         </table>
+                  <a href="[aBus.bus_id+ '.html'/]">Go to bookings page>>> </a>
+              
+     </body>
+     
+</html>
+
+[/file]
+
+[for (passenger : Passenger | aBus.passenger)]
+    [passenger.passengerDetails()/]
+[/for]
+
+[/template]
+[template public passengerDetails(passenger : Passenger)]
+[file(passenger.last_name + '.html', false, 'UTF-8')]
+<html>
+    <head>
+         <title>[passenger.last_name/]</title>
+    </head>   
+    <body> 
+    <h1>List of bookings made by a passenger:</h1>
+    <table>
+      <tr>
+         <th>Booking ID</th>
+         <th>Passenger ID</th>
+         <th>Date of Journey</th>
+         <th>Booking </th>
+         <th></th>
+      </tr>         
+     [for (booking : Booking | passenger.booking)]
+              <tr>
+                <td>
+                  [booking.booking_id/]
+                </td>
+                <td>
+                  [booking.passenger_id/]
+                </td>
+                <td>
+                  [booking.journey_date/]
+                </td>
+                <td>
+                  [booking.status/]
+                </td>
+                <td>
+                  [booking.payment_date/]
+                </td>
+              </tr>
+               [/for]
+    </table>
+    </body>
+</html>
+[/file]
+[/template]

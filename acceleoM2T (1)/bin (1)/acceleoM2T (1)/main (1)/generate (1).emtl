@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generate" nsURI="acceleoM2T::main::generate" startHeaderPosition="29" endHeaderPosition="138">
+    <input>
+      <takesTypesFrom href="http://www.example.org/bts#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateElement" visibility="Public" main="true">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&lt;html>&#xA;&#x9;&lt;head>&#xA;&#x9;&#x9;&lt;title> Bus Transport System "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aBus" referredVariable="/0/generateElement/aBus">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/bts#//Bus/bus_id"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;/title>&#xA;&#x9;&lt;/head>&#xA;    &#xA;&#x9;&lt;body>&#xA;        &lt;h1 style=&quot;background-color:DodgerBlue;&quot;> Bus Transport System &lt;/h1>&#xA;&#x9;&#x9;&lt;h2>This sections shows list of cities.&lt;/h2>&#xA;        &lt;h2>Service is operational for just following cities:&lt;/h2>&#xA;&#x9;&#x9;&lt;table>&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="              &lt;tr>&#xA;                &lt;td>&#xA;                  "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="city" referredVariable="/0/generateElement/%/%.3/city">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//City"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/bts#//City/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;                &lt;/td>&#xA;              &lt;/tr>&#xA;"/>
+          <loopVariable name="city">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//City"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(City)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aBus" referredVariable="/0/generateElement/aBus">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/bts#//Bus/city"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="         &lt;/table>&#xA;                  &lt;a href=&quot;"/>
+        <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aBus" referredVariable="/0/generateElement/aBus">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/bts#//Bus/bus_id"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".html">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;>Go to bookings page>>> &lt;/a>&#xA;              &#xA;     &lt;/body>&#xA;     &#xA;&lt;/html>&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aBus" referredVariable="/0/generateElement/aBus">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/bts#//Bus/bus_id"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".html">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    "/>
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/passengerDetails">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="passenger" referredVariable="/0/generateElement/%.2/passenger">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <loopVariable name="passenger">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Passenger)">
+          <source xsi:type="ocl.ecore:VariableExp" name="aBus" referredVariable="/0/generateElement/aBus">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/bts#//Bus/passenger"/>
+        </iterSet>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <parameter name="aBus">
+        <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="passengerDetails" visibility="Public">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;html>&#xA;    &lt;head>&#xA;         &lt;title>"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="passenger" referredVariable="/0/passengerDetails/passenger">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/bts#//Passenger/last_name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/title>&#xA;    &lt;/head>   &#xA;    &lt;body> &#xA;    &lt;h1>List of bookings made by a passenger:&lt;/h1>&#xA;    &lt;table>&#xA;      &lt;tr>&#xA;         &lt;th>Booking ID&lt;/th>&#xA;         &lt;th>Passenger ID&lt;/th>&#xA;         &lt;th>Date of Journey&lt;/th>&#xA;         &lt;th>Booking &lt;/th>&#xA;         &lt;th>&lt;/th>&#xA;      &lt;/tr>         &#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="              &lt;tr>&#xA;                &lt;td>&#xA;                  "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="booking" referredVariable="/0/passengerDetails/%/%.3/booking">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/bts#//Booking/booking_id"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;                &lt;/td>&#xA;                &lt;td>&#xA;                  "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="booking" referredVariable="/0/passengerDetails/%/%.3/booking">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/bts#//Booking/passenger_id"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;                &lt;/td>&#xA;                &lt;td>&#xA;                  "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="booking" referredVariable="/0/passengerDetails/%/%.3/booking">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/bts#//Booking/journey_date"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;                &lt;/td>&#xA;                &lt;td>&#xA;                  "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EEnum" href="http://www.example.org/bts#//booking_status"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="booking" referredVariable="/0/passengerDetails/%/%.3/booking">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/bts#//Booking/status"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;                &lt;/td>&#xA;                &lt;td>&#xA;                  "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="booking" referredVariable="/0/passengerDetails/%/%.3/booking">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/bts#//Booking/payment_date"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;                &lt;/td>&#xA;              &lt;/tr>&#xA;"/>
+          <loopVariable name="booking">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Booking)">
+            <source xsi:type="ocl.ecore:VariableExp" name="passenger" referredVariable="/0/passengerDetails/passenger">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/bts#//Passenger/booking"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    &lt;/table>&#xA;    &lt;/body>&#xA;&lt;/html>&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="passenger" referredVariable="/0/passengerDetails/passenger">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/bts#//Passenger/last_name"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".html">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="passenger">
+        <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="+">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateElement"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aBus">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="passengerDetails">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/passengerDetails"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="passenger">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="bts_Bus_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.example.org/bts#//Bus"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="bts_Passenger_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.example.org/bts#//Passenger"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(City)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.example.org/bts#//City"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Passenger)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Booking)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//City"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//City"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Bus"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Booking"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/bts#//Passenger"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateElement">
+      <details key="start" value="78"/>
+      <details key="end" value="916"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateElement/%">
+      <details key="start" value="141"/>
+      <details key="end" value="812"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateElement/%/%">
+      <details key="start" value="189"/>
+      <details key="end" value="236"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateElement/%/%.1">
+      <details key="start" value="237"/>
+      <details key="end" value="248"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateElement/%/%.1/aBus">
+      <details key="start" value="237"/>
+      <details key="end" value="241"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateElement/%/%.2">
+      <details key="start" value="250"/>
+      <details key="end" value="483"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateElement/%/%.3">
+      <details key="start" value="497"/>
+      <details key="end" value="663"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateElement/%/%.3/%">
+      <details key="start" value="529"/>
+      <details key="end" value="587"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateElement/%/%.3/%.1">
+      <details key="start" value="588"/>
+      <details key="end" value="597"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateElement/%/%.3/%.1/city">
+      <details key="start" value="588"/>
+      <details key="end" value="592"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateElement/%/%.3/%.2">
+      <details key="start" value="599"/>
+      <details key="end" value="642"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateElement/%/%.3/city">
+      <details key="start" value="503"/>
+      <details key="end" value="514"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateElement/%/%.3/%.3">
+      <details key="start" value="517"/>
+      <details key="end" value="526"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateElement/%/%.3/%.3/aBus">
+      <details key="start" value="517"/>
+      <details key="end" value="521"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateElement/%/%.4">
+      <details key="start" value="664"/>
+      <details key="end" value="709"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateElement/%/%.5">
+      <details key="start" value="710"/>
+      <details key="end" value="730"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateElement/%/%.5/%">
+      <details key="start" value="710"/>
+      <details key="end" value="721"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateElement/%/%.5/%/aBus">
+      <details key="start" value="710"/>
+      <details key="end" value="714"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateElement/%/%.5/%.1">
+      <details key="start" value="723"/>
+      <details key="end" value="730"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateElement/%/%.6">
+      <details key="start" value="732"/>
+      <details key="end" value="805"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateElement/%/%.7">
+      <details key="start" value="148"/>
+      <details key="end" value="169"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateElement/%/%.7/%">
+      <details key="start" value="148"/>
+      <details key="end" value="159"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateElement/%/%.7/%/aBus">
+      <details key="start" value="148"/>
+      <details key="end" value="152"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateElement/%/%.7/%.1">
+      <details key="start" value="162"/>
+      <details key="end" value="169"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateElement/%/%.8">
+      <details key="start" value="179"/>
+      <details key="end" value="186"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateElement/%.1">
+      <details key="start" value="813"/>
+      <details key="end" value="814"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateElement/%.2">
+      <details key="start" value="814"/>
+      <details key="end" value="903"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateElement/%.2/%">
+      <details key="start" value="861"/>
+      <details key="end" value="865"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateElement/%.2/%.1">
+      <details key="start" value="866"/>
+      <details key="end" value="894"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateElement/%.2/%.1/passenger">
+      <details key="start" value="866"/>
+      <details key="end" value="875"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateElement/%.2/%.2">
+      <details key="start" value="896"/>
+      <details key="end" value="897"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateElement/%.2/passenger">
+      <details key="start" value="820"/>
+      <details key="end" value="841"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateElement/%.2/%.3">
+      <details key="start" value="844"/>
+      <details key="end" value="858"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateElement/%.2/%.3/aBus">
+      <details key="start" value="844"/>
+      <details key="end" value="848"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateElement/%.3">
+      <details key="start" value="904"/>
+      <details key="end" value="905"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateElement/aBus">
+      <details key="start" value="111"/>
+      <details key="end" value="121"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/passengerDetails">
+      <details key="start" value="917"/>
+      <details key="end" value="1937"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/passengerDetails/%">
+      <details key="start" value="975"/>
+      <details key="end" value="1925"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/passengerDetails/%/%">
+      <details key="start" value="1029"/>
+      <details key="end" value="1063"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/passengerDetails/%/%.1">
+      <details key="start" value="1064"/>
+      <details key="end" value="1083"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/passengerDetails/%/%.1/passenger">
+      <details key="start" value="1064"/>
+      <details key="end" value="1073"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/passengerDetails/%/%.2">
+      <details key="start" value="1085"/>
+      <details key="end" value="1356"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/passengerDetails/%/%.3">
+      <details key="start" value="1361"/>
+      <details key="end" value="1884"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/passengerDetails/%/%.3/%">
+      <details key="start" value="1407"/>
+      <details key="end" value="1465"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/passengerDetails/%/%.3/%.1">
+      <details key="start" value="1466"/>
+      <details key="end" value="1484"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/passengerDetails/%/%.3/%.1/booking">
+      <details key="start" value="1466"/>
+      <details key="end" value="1473"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/passengerDetails/%/%.3/%.2">
+      <details key="start" value="1486"/>
+      <details key="end" value="1548"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/passengerDetails/%/%.3/%.3">
+      <details key="start" value="1549"/>
+      <details key="end" value="1569"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/passengerDetails/%/%.3/%.3/booking">
+      <details key="start" value="1549"/>
+      <details key="end" value="1556"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/passengerDetails/%/%.3/%.4">
+      <details key="start" value="1571"/>
+      <details key="end" value="1633"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/passengerDetails/%/%.3/%.5">
+      <details key="start" value="1634"/>
+      <details key="end" value="1654"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/passengerDetails/%/%.3/%.5/booking">
+      <details key="start" value="1634"/>
+      <details key="end" value="1641"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/passengerDetails/%/%.3/%.6">
+      <details key="start" value="1656"/>
+      <details key="end" value="1718"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/passengerDetails/%/%.3/%.7">
+      <details key="start" value="1719"/>
+      <details key="end" value="1733"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/passengerDetails/%/%.3/%.7/booking">
+      <details key="start" value="1719"/>
+      <details key="end" value="1726"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/passengerDetails/%/%.3/%.8">
+      <details key="start" value="1735"/>
+      <details key="end" value="1797"/>
+      <details key="line" value="68"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/passengerDetails/%/%.3/%.9">
+      <details key="start" value="1798"/>
+      <details key="end" value="1818"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/passengerDetails/%/%.3/%.9/booking">
+      <details key="start" value="1798"/>
+      <details key="end" value="1805"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/passengerDetails/%/%.3/%.10">
+      <details key="start" value="1820"/>
+      <details key="end" value="1863"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/passengerDetails/%/%.3/booking">
+      <details key="start" value="1367"/>
+      <details key="end" value="1384"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/passengerDetails/%/%.3/%.11">
+      <details key="start" value="1387"/>
+      <details key="end" value="1404"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/passengerDetails/%/%.3/%.11/passenger">
+      <details key="start" value="1387"/>
+      <details key="end" value="1396"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/passengerDetails/%/%.4">
+      <details key="start" value="1885"/>
+      <details key="end" value="1918"/>
+      <details key="line" value="74"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/passengerDetails/%/%.5">
+      <details key="start" value="981"/>
+      <details key="end" value="1010"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/passengerDetails/%/%.5/%">
+      <details key="start" value="981"/>
+      <details key="end" value="1000"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/passengerDetails/%/%.5/%/passenger">
+      <details key="start" value="981"/>
+      <details key="end" value="990"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/passengerDetails/%/%.5/%.1">
+      <details key="start" value="1003"/>
+      <details key="end" value="1010"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/passengerDetails/%/%.6">
+      <details key="start" value="1019"/>
+      <details key="end" value="1026"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/passengerDetails/passenger">
+      <details key="start" value="951"/>
+      <details key="end" value="972"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
